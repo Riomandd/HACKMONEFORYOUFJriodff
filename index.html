@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HACK FOR MONEY</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: radial-gradient(circle at top left, #1f1c2c, #928dab);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(20px);
+      border-radius: 30px;
+      padding: 60px;
+      max-width: 880px;
+      width: 90%;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6), 0 0 60px rgba(255, 215, 0, 0.15);
+    }
+
+    h2 {
+      font-size: 52px;
+      margin-bottom: 30px;
+      background: linear-gradient(to right, #ffe57f, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .form-element {
+      margin: 25px auto;
+      max-width: 700px;
+      width: 100%;
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 255, 255, 0.05));
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 20px 25px;
+      box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.06),
+                  0 0 12px rgba(255, 215, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .form-element:hover {
+      box-shadow: 0 0 18px rgba(255, 215, 0, 0.3),
+                  inset 0 0 10px rgba(255, 255, 255, 0.05);
+      transform: scale(1.01);
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 26px;
+      font-size: 34px;
+      border-radius: 18px;
+      border: none;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    input, select {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    input::placeholder {
+      color: #ccc;
+    }
+
+    select {
+      appearance: none;
+      background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+      background-repeat: no-repeat;
+      background-position: right 20px center;
+      background-size: 20px;
+      padding-right: 60px;
+      font-weight: 500;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: gold;
+      box-shadow: 0 0 12px gold;
+    }
+
+    button {
+      background: linear-gradient(135deg, #ffe57f, #ffcc00);
+      color: #000;
+      cursor: pointer;
+      font-weight: bold;
+      text-transform: uppercase;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    }
+
+    button:hover {
+      box-shadow: 0 0 35px rgba(255, 215, 0, 0.7);
+    }
+
+    #custom-alert {
+      margin-top: 40px;
+      padding: 22px 40px;
+      border-radius: 16px;
+      font-size: 30px;
+      font-weight: 500;
+      display: none;
+      transition: all 0.3s ease;
+    }
+
+    #custom-alert.success {
+      background: linear-gradient(135deg, #b4ec51, #429321);
+      color: #fff;
+      border: 2px solid #e4ffb7;
+      box-shadow: 0 0 25px rgba(180, 236, 81, 0.6), 0 0 50px rgba(66, 147, 33, 0.4);
+      animation: pulseSuccess 1.5s infinite alternate;
+    }
+
+    @keyframes pulseSuccess {
+      from {
+        transform: scale(1);
+        box-shadow: 0 0 25px rgba(180, 236, 81, 0.6);
+      }
+      to {
+        transform: scale(1.03);
+        box-shadow: 0 0 40px rgba(180, 236, 81, 0.9);
+      }
+    }
+
+    #custom-alert.error {
+      background: rgba(139, 0, 0, 0.85);
+      box-shadow: 0 0 22px rgba(255, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>HACK FOR MONEY</h2>
+   
+    <h3>DAILY LIMIT 3000RS PER ACCOUNT</h3>
+
+    <div class="form-element">
+      <input type="text" id="uid" placeholder="ENTER YOUR UID" />
+    </div>
+
+    <div class="form-element">
+      <select id="game">
+        <option value="">Select Game</option>
+        <option value="91CLUB">91CLUB</option>
+        <option value="OKWIN">OKWIN</option>
+        <option value="DIUWIN">DIUWIN</option>
+        <option value="BDG GAME">BDG GAME</option>
+        <option value="BIG MUMBAI">BIG MUMBAI</option>
+      </select>
+    </div>
+
+    <div class="form-element">
+      <select id="amount">
+        <option value="">Select Amount</option>
+        <option value="100">100</option>
+        <option value="200">200</option>
+        <option value="500">500</option>
+        <option value="1000">1000</option>
+      </select>
+    </div>
+
+    <div class="form-element">
+      <button onclick="placeOrder()">Place Order</button>
+    </div>
+
+    <div id="custom-alert"></div>
+  </div>
+
+  <script>
+    function showAlert(message, type = "") {
+      const alertBox = document.getElementById("custom-alert");
+      alertBox.textContent = message;
+      alertBox.className = "";
+      alertBox.classList.add(type);
+      alertBox.style.display = "block";
+    }
+
+    function placeOrder() {
+      const uid = document.getElementById("uid").value.trim();
+      const game = document.getElementById("game").value;
+      const amount = document.getElementById("amount").value;
+
+      if (!uid || !game || !amount) {
+        showAlert("Please enter UID, select a game, and choose an amount.", "error");
+        return;
+      }
+
+      let secondsLeft = 60;
+      showAlert(`Processing your order... Please wait ${secondsLeft} seconds.`, "success");
+
+      const countdown = setInterval(() => {
+        secondsLeft--;
+        if (secondsLeft > 0) {
+          showAlert(`Processing your order... Please wait ${secondsLeft} seconds.`, "success");
+        } else {
+          clearInterval(countdown);
+          showAlert(`Order for UID ${uid} placed successfully on game ${game}!`, "success");
+        }
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>
